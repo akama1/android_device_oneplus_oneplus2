@@ -64,7 +64,7 @@ restorecon -R /sys/devices/system/cpu # must restore after interactive
 write /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_sched_load 0
 write /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_migration_notif 0
 write /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay 0
-write /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load 85
+write /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load 95
 write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 40000
 write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 960000
 write /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy 1
@@ -75,6 +75,9 @@ write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 384000
 write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_slack -1
 write /sys/devices/system/cpu/cpu0/cpufreq/interactive/align_windows 0
 write /sys/devices/system/cpu/cpu4/cpufreq/interactive/boostpulse_duration 80000
+write /sys/module/cpu_boost/parameters/input_boost_enabled 1
+write /sys/module/cpu_boost/parameters/input_boost_freq "0:600000 1:600000 2:0 3:0 4:0 5:0 6:0 7:0"
+write /sys/module/cpu_boost/parameters/input_boost_ms 20
 
 # configure governor settings for big cluster
 write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor interactive
@@ -82,7 +85,7 @@ restorecon -R /sys/devices/system/cpu # must restore after interactive
 write /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_sched_load 1
 write /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_migration_notif 1
 write /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay 0
-write /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load 90
+write /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load 99
 write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate 20000
 write /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq 1440000
 write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack -1
