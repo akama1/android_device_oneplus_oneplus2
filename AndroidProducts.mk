@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/pixys_oneplus2.mk
+    $(LOCAL_DIR)/dot_oneplus2.mk
