@@ -1,0 +1,5 @@
+# For text relocations in /system/vendor/lib/libmmcamera_faceproc.so
+allow mm-qcamerad vendor_file:file execmod;
+
+allow mm-qcamerad sysfs_laser:dir search;
+allow mm-qcamerad sysfs_laser:lnk_file read;
