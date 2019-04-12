@@ -100,11 +100,11 @@ write/sys/devices/system/cpu/cpu4/cpufreq/interactive/use_sched_load 0
 write /sys/devices/system/cpu/cpu4/cpufreq/interactive/boostpulse_duration 80000
 
 # SD810 tweaks
-/sys/module/qpnp_fg/parameters/debug_mask 1
-/sys/module/qpnp_fg/parameters/sense_type 0
-/sys/module/qpnp_smbcharger/parameters/vf_adjust_high_threshold 99
-/sys/module/qpnp_smbcharger/parameters/vf_adjust_low_threshold 55
-/sys/module/qpnp_fg/parameters/first_est_dump 1
+write /sys/module/qpnp_fg/parameters/debug_mask 1
+write /sys/module/qpnp_fg/parameters/sense_type 0
+write /sys/module/qpnp_smbcharger/parameters/vf_adjust_high_threshold 99
+write /sys/module/qpnp_smbcharger/parameters/vf_adjust_low_threshold 55
+write /sys/module/qpnp_fg/parameters/first_est_dump 1
 
 # plugin remaining A57s
 write /sys/devices/system/cpu/cpu5/online 1
