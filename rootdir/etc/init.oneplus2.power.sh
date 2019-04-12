@@ -99,6 +99,13 @@ write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 633600
 write/sys/devices/system/cpu/cpu4/cpufreq/interactive/use_sched_load 0
 write /sys/devices/system/cpu/cpu4/cpufreq/interactive/boostpulse_duration 80000
 
+# SD810 tweaks
+/sys/module/qpnp_fg/parameters/debug_mask 1
+/sys/module/qpnp_fg/parameters/sense_type 0
+/sys/module/qpnp_smbcharger/parameters/vf_adjust_high_threshold 99
+/sys/module/qpnp_smbcharger/parameters/vf_adjust_low_threshold 55
+/sys/module/qpnp_fg/parameters/first_est_dump 1
+
 # plugin remaining A57s
 write /sys/devices/system/cpu/cpu5/online 1
 write /sys/devices/system/cpu/cpu6/online 1
@@ -108,7 +115,7 @@ write /sys/devices/system/cpu/cpu7/online 1
 write /sys/devices/system/cpu/cpu4/core_ctl/max_cpus 4
 write /sys/devices/system/cpu/cpu4/core_ctl/min_cpus 0
 write /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres 60
-write /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres 30
+write /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres 50
 write /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms  100
 write /sys/devices/system/cpu/cpu4/core_ctl/task_thres 4
 write /sys/devices/system/cpu/cpu4/core_ctl/is_big_cluster 1
